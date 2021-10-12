@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "2021.ver wetube renewal",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon",
+    "start" : "node build/init.js",
+    "build":  "npm run bulid:server && npm run build:assets",
+    "bulid:server": "babel src -d build",
+    "build:assets" : "webpack --mode=production",
+    "dev:assets": "webpack --mode=development -w",
     "assets": "webpack"
   },
   "repository": {
@@ -33,7 +36,8 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
     "@babel/node": "^7.14.7",
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.14.7",

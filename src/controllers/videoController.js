@@ -76,7 +76,7 @@ export const postVideoUpload = async (req, res) => {
     // save에서는 잘못된 데이터 형식을 받으면 해당 데이터는 생략하고 만들지만, (required가 없는 경우엔)
     // create는 잘못된 데이터형식이 있으면 에러를 띄우고 저장도 안합니다.
     } catch (e) {
-        console.log(e)
+        // console.log(e)
         return res.status(400).render("upload", {pageTitle : "Upload Video", errormessage:e._message})
     }
 }

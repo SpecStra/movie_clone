@@ -13,9 +13,8 @@ module.exports = {
     plugins: [new MiniCssExtractPlugin({
         filename: "css/styles.css"
     })],
-    mode : "development",
     // watch를 하고있으면, 아웃풋 파일에 변경이 생길 경우 즉시 바꿔줍니다. 다만 해당 콘솔은 계속 켜둬야 합니다.
-    watch: true,
+    // watch: true,
     output : {
         filename: "js/[name].js",
         path: path.resolve(__dirname, "assets"),

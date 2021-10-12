@@ -5,10 +5,10 @@ import "./db"
 import "./models/Video"
 import "./models/User"
 import "./models/Comment"
-import express from "express";
 import app from "./server"
+import "regenerator-runtime"
 
-const PORT = 5000
+const PORT = 4500
 
 const handleListening = () => console.log(`Server listening on port http://localhost:${PORT}`)
 
