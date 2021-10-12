@@ -8,7 +8,6 @@ block content
         input(placeholder="nickname", name="nickname", type="text", required, value=loggedInUser.nickname)
         input(placeholder="location", name="location", type="text", required, value=loggedInUser.location)
         input(type="submit", value="Update Profile")
-        hr
         if !loggedInUser.socialOnly
             div.edit-profile__password
                 a(href="change-password") Change Password &rarr;

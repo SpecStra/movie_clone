@@ -18,6 +18,8 @@ header
                             span ❤
                         else
                             if loggedInUser.avatarURL
+                                img(src="/" + loggedInUser.avatarURL).avatar
+                            else if loggedInUser.socialOnly
                                 img(src=loggedInUser.avatarURL).avatar
                             else
                                 p #{`Needs\nAvatar`}

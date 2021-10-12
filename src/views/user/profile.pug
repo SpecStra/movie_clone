@@ -3,10 +3,10 @@ include ../mixins/video
 
 block content
     div.profile__data
-        // #{console.log(user)}
-        #{console.log("using profile : " + user.avatarURL)}
-        if user.avatarURL
-            img(src=user.avatarURL).avatar
+        if loggedInUser.avatarURL
+            img(src="/" + loggedInUser.avatarURL).avatar
+        else if loggedInUser.socialOnly
+            img(src=loggedInUser.avatarURL).avatar
         else
             p #{`Needs\nAvatar`}
         h3=user.nickname

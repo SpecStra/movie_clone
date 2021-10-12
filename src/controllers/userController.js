@@ -155,7 +155,7 @@ export const userEditPost = async (req, res) => {
     }
      */
     req.session.user = updatedUser
-    return res.redirect("/user")
+    return res.redirect("/")
 }
 export const userChangePassword = (req, res) => {
     return res.render("user/change-password", {pageTitle : "change Password"})
