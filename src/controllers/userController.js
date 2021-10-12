@@ -38,7 +38,6 @@ export const userLogin = (req, res) => {
 export const userLoginPost = async (req, res) => {
     const {username, password} = req.body
     const pageTitle = "login"
-    console.log("testing")
     const user = await User.findOne({username : username})
     if(!user){
         return res.status(400).render("login", {pageTitle : pageTitle, errormessage : "account does not exist"})
@@ -156,7 +155,7 @@ export const userEditPost = async (req, res) => {
     }
      */
     req.session.user = updatedUser
-    return res.redirect("/user/edit")
+    return res.redirect("/user")
 }
 export const userChangePassword = (req, res) => {
     return res.render("user/change-password", {pageTitle : "change Password"})

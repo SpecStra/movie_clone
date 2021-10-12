@@ -12,11 +12,15 @@ header
                 li
                     a(href="/videos/upload") Upload Video
                 li
+                    #{console.log("using Header and : " + loggedInUser.avatarURL)}
                     a(href=`/user/${loggedInUser._id}`)
                         if loggedInUser.avatarURL === ""
                             span ❤
                         else
-                            img(src="/" + user.avatarURL).avatar
+                            if loggedInUser.avatarURL
+                                img(src=loggedInUser.avatarURL).avatar
+                            else
+                                p #{`Needs\nAvatar`}
                 li
                     a(href="/user/edit") Edit Profile
                 li
