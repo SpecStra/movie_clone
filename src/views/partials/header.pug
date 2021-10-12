@@ -14,12 +14,9 @@ header
                 li
                     a(href=`/user/${loggedInUser._id}`)
                         if loggedInUser.avatarURL === ""
-                            span ㅇ
+                            span ❤
                         else
-                            if loggedInUser.socialOnly
-                                img(src=user.avatarURL).avatar
-                            else
-                                img(src="/" + user.avatarURL).avatar
+                            img(src="/" + user.avatarURL).avatar
                 li
                     a(href="/user/edit") Edit Profile
                 li
