@@ -8,7 +8,7 @@
     "bulid:server": "babel src -d build",
     "build:assets" : "webpack --mode=production",
     "dev:assets": "webpack --mode=development -w",
-    "assets": "webpack"
+    "dev:server": "nodemon"
   },
   "repository": {
     "type": "git",
