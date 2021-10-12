@@ -1,0 +1,46 @@
+extends base
+
+block content
+    script(src="/static/js/videoPlayer.js", async)
+    if loggedIn
+        script(src="/static/js/commentSection.js", async)
+    div#videoContainer(data-id=video._id)
+        p(align="middle")
+            video(src="/"+video.videoFileUrl)
+        div#videoControls
+            button#play
+                i(class="fas fa-play", id="playIcon")
+            div#timeSpace
+                span#currentTime 00:00
+                span /
+                span#totalTime 00:00
+            input(id="timeLine" type="range" , step="1" , value="0" , min="0")
+            input(id="volume", type="range", step="0.1", value="0.5", min="0", max="1")
+            button#mute
+                i(class="fas fa-volume-up", id="muteIcon")
+            div
+                button#fullScreen
+                    i(class="fas fa-expand-alt", id="screenIcon")
+
+    div
+        p=video.description
+        small=video.createdAt
+    div
+        small Uploaded By
+            a(href=`/user/${video.owner._id}`) #{video.owner.nickname}
+    if String(video.owner._id) === String(loggedInUser._id)
+        a(href=`${video.id}/edit`) Edit Video &rarr;
+        br
+        a(href=`${video.id}/delete`) Delete Video &rarr;
+
+    div.video__comments
+        form.video__comments-form#commentForm
+            textarea(cols="30", rows="10", placeholder="Write a comments...")
+            button Add Comment
+
+    div.video__showComments
+        ul
+            each comment in video.comments.reverse()
+                li.comment
+                    i.fas.fa-comment
+                    |  #{comment.text}

@@ -1,0 +1,9 @@
+extends base
+include mixins/video
+
+block content
+    div.videos__grid
+        each partialVideo in videos
+            +video(partialVideo)
+        else
+            span.empty_message Sorry, We can't find anything.

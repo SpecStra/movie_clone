@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+    head
+        title #{pageTitle} - Wetube
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+        link(rel="stylesheet", href="/static/css/styles.css")
+    body
+        include partials/header.pug
+        main
+            if errormessage
+                h1=errormessage
+            block content
+    include partials/footer.pug
+    block scripts

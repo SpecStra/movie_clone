@@ -1,0 +1,56 @@
+
+// Config
+@import "config/_variable.scss";
+@import "config/_reset.scss";
+
+// Components
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/video.scss";
+@import "./components/shared.scss";
+@import "components/forms";
+@import "components/socia-login";
+@import "components/videoPlayer";
+
+// Screens
+@import "./screens/home.scss";
+@import "screens/search";
+@import "screens/profile";
+@import "screens/edit-profile";
+
+// Defaults
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: $bg;
+  color: white;
+
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.video__showComments{
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  .comment{
+    padding : 10px;
+    text-align: center;
+    border-radius: 9999px;
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+  }
+}

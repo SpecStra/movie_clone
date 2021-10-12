@@ -1,0 +1,14 @@
+extends base
+include mixins/video
+
+block content
+    form(method="GET").search__form
+        input(placeholder="Search by title", type="text", name="keyword")
+        button
+            i.fas.fa-search
+        // input(type="submit", value="Search Now")
+    div.video__grid
+        each partialVideo in videos
+            +video(partialVideo)
+        else
+            span.empty_message Sorry, We can't find anything.

@@ -1,0 +1,11 @@
+mixin video(videoInfo)
+    a(href=`/videos/${videoInfo.id}`).video-mixin
+        div.video-mixin__thumb
+        div.video-mixin__data
+            span.video-mixin__title=videoInfo.title
+            div.video-mixin__meta
+                span #{videoInfo.owner.nickname} ©
+                span=" "
+                span #{videoInfo.meta.views} 회
+
+
