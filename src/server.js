@@ -10,6 +10,7 @@ import MongoStore from "connect-mongo";
 import {localsMiddleware} from "./middlewares";
 import apiRouter from "./routers/apiRouter";
 import cookieParser from "cookie-parser";
+import flash from "connect-flash"
 import 'regenerator-runtime'
 
 // 미들웨어란, req와 res사이의 기능을 하는 어떤 함수를 말합니다. req, res, next를 인자로 갖습니다.
@@ -35,6 +36,7 @@ app.use(session({
     store : MongoStore.create({ mongoUrl : process.env.DB_URL})
 }))
 
+app.use(flash())
 app.use(localsMiddleware)
 app.use("/", rootRouter)
 app.use("/user", userRouter)
