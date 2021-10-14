@@ -86,7 +86,7 @@ export const videoSearch = async (req, res) => {
     if (keyword){
         videos = await Video.find({
             title : {
-                $regex: new RegExp(`${keyword}$`, "i")
+                $regex: new RegExp(`${keyword}*`, "i")
             } // i는 contains를 의미합니다.
         }).populate("owner")
     }

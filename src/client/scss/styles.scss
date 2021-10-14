@@ -37,6 +37,13 @@ main {
   margin-top: 50px;
 }
 
+video{
+  height: auto;
+  width: auto;
+  min-height: 300px;
+  min-width: 300px;
+}
+
 .video__showComments{
   display: flex;
   flex-direction: column;

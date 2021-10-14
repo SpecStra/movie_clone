@@ -12,7 +12,6 @@ header
                 li
                     a(href="/videos/upload") Upload Video
                 li
-                    #{console.log("using Header and : " + loggedInUser.avatarURL)}
                     a(href=`/user/${loggedInUser._id}`)
                         if loggedInUser.avatarURL === ""
                             span ❤
