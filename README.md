@@ -1,5 +1,5 @@
-# 유지보수
+# under maintenance
 
-###썸네일
+### 1.1 : avatar image bug fix
 
-###검색창 CSS 및 정규표현식 지원
+#### aHR0cHM6Ly9tb3ZpZS1jbG9uZS1sb2FkZWQuaGVyb2t1YXBwLmNvbS8=
