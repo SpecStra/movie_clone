@@ -12,6 +12,7 @@
     font-size: 16px;
     color: white;
     width: 90%;
+    height: auto;
   }
   button{
     all : unset
@@ -20,8 +21,8 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
-    top : 8px;
-    right : 5px;
+    top : 32.5%;
+    right : 8%;
     text-align: center;
     padding: 10px;
     cursor: pointer;

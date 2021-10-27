@@ -22,12 +22,26 @@ block content
                 button#fullScreen
                     i(class="fas fa-expand-alt", id="screenIcon")
 
-    div
-        p=video.description
-        small=video.createdAt
-    div
-        small Uploaded By
-            a(href=`/user/${video.owner._id}`) #{video.owner.nickname}
+    div.video_watch
+        div.video_watch_tag
+            each tag in video.hashtags
+                a=tag
+        div.video_watch_title
+            span=video.title
+        div.video_watch_meta
+            span #{video.meta.views} Views
+            span  ⊙
+            span=video.createdAt
+
+        div.video_watch_userInfo
+            div.video_watch_userInfo_top
+                a(href=`/user/${video.owner._id}`)
+                    img.video.watch_user_top_img(src=`/${video.owner.avatarURL}`)
+                a(href=`/user/${video.owner._id}`)
+                    div.video_watch_userInfo_top_name #{video.owner.nickname}
+            div.video_watch_userInfo_bot
+                span #{video.description}
+
     if String(video.owner._id) === String(loggedInUser._id)
         a(href=`${video.id}/edit`) Edit Video &rarr;
         br
@@ -35,8 +49,9 @@ block content
 
     div.video__comments
         form.video__comments-form#commentForm
-            textarea(cols="30", rows="10", placeholder="Write a comments...")
-            button Add Comment
+            textarea.video__comments-form_textarea(cols="30", rows="10", placeholder="Write a comments...")
+            div
+                button.video__comments-form_button ✔
 
     div.video__showComments
         ul

@@ -1,0 +1,66 @@
+.video_watch{
+  .video_watch_tag{
+    font-size: 12px;
+    color: #006AF6;
+  }
+  .video_watch_title{
+    height: 26px;
+    font-size: 22px;
+    color: #D7D4D1;
+    margin-top: 14px;
+  }
+  .video_watch_meta{
+    height: 40px;
+    font-size: 14px;
+    color: #968F83;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .video_watch_userInfo{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .video_watch_userInfo_top{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .video.watch_user_top_img{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+      }
+      .video_watch_userInfo_top_name{
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 25px;
+      }
+    }
+    .video_watch_userInfo_bot{
+      margin-top: 18px;
+      margin-left: 75px;
+      font-size: 14px;
+    }
+  }
+}
+
+.video__comments{
+  .video__comments-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .video__comments-form_textarea{
+      resize: none;
+      height: 40px;
+      box-sizing: border-box;
+      background-color: rgba(40, 40, 40, 2);
+      color: #d4d4d4;
+    }
+    .video__comments-form_button{
+      color: red;
+      height: 40px;
+    }
+  }
+}

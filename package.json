@@ -4,7 +4,9 @@
   "description": "2021.ver wetube renewal",
   "scripts": {
     "start" : "node build/init.js",
+    "checkingOn": "nodemon --exec babel-node src/init.js",
     "build":  "npm run bulid:server && npm run build:assets",
+    "herokuDeploy" :  "git push heroku main",
     "bulid:server": "babel src -d build",
     "build:assets" : "webpack --mode=production",
     "dev:assets": "webpack --mode=development -w",
