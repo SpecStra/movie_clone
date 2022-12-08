@@ -26,3 +26,4 @@
 
 https://movie-clone-loaded.herokuapp.com/
 * Heroku seems to periodically remove uploaded resources. Immediately uploaded works are fine.
+* As of November 28th, 2022, free Heroku Postgres and Heroku Data for Redis® plans are no longer available. If you used these resources, and want to recover your data, contact Heroku Support as soon as possible. :(
